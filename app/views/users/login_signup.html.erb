@@ -1,0 +1,37 @@
+
+  <% if current_user %>
+    <%= link_to "Sign Out", '/logout', method: :delete %>
+  <% else %>
+    <%= form_tag '/sessions' do %>
+      <%= text_field_tag :username, nil, placeholder: "Username" %>
+      <%= password_field_tag :password, nil, placeholder: "Password" %>
+      <%= submit_tag "Log In" %>
+    <% end %>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div style="background:yellow;">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+
+<br><br><br>
+
+<%= form_for User.new do |f| %>
+
+  <%=f.label :fname %>
+  <%=f.text_field :fname %>
+  <br>
+  <%=f.label :lname %>
+  <%=f.text_field :lname %>
+  <br>
+  <%=f.label :username %>
+  <%=f.text_field :username %>
+  <br>
+  <%=f.label :password %>
+  <%=f.text_field :password %>
+  <br>
+  <%=f.submit :submit %>
+<% end %>
+
+

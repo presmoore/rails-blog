@@ -1,6 +1,8 @@
 Railsblog::Application.routes.draw do
 
-  root 'users#index'
+  root 'users#login_signup'
+
+  get '/login_signup' => 'users#create'
 
   resources :users
 
