@@ -1,14 +1,24 @@
 Railsblog::Application.routes.draw do
 
-  root 'users#index'
+  resources :posts
+
+  root 'users#index' 
 
   get '/login_signup' => 'users#new'
+
+  get '/profile' => 'users#show'
+
+  post '/profile' => 'users#edit'
+
+  delete '/profile' => 'users#destroy'
 
   resources :users
 
   resources :sessions
 
   delete '/logout' => 'sessions#destroy'
+
+  get '/posts' => 'posts#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -8,6 +8,30 @@
 </head>
 <body>
 
+<nav>
+  <div id="unordered_list_wrapper">
+    <ul class="navigation">
+      <li><a href="http://localhost:3000/profile">Profile</a></li>
+      <li><a href="http://localhost:3000/login_signup">Login/SignUp</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <%= form_for Post.new do |p| %>
+    <%=p.label "Make a Post" %>
+    <br>
+    <%=p.label "Title" %>
+    <%=p.text_field :title %>
+    <br>
+    <%=p.label "Text" %>
+    <%=p.text_field :textarea %>
+    <br>
+    <%=p.submit :submit %>
+  <% end %>
+</header>
+
+
 <%= yield %>
 
 </body>

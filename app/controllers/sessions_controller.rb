@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:alert] = "Successfully Logged Out"
-    redirect_to root_path
+    redirect_to '/login_signup'
   end
 
   def create

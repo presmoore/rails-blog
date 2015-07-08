@@ -1,0 +1,13 @@
+  
+  <% current_user.posts.each do |p| %>
+  <h3>
+    <%= p.title %>
+  </h3>
+  <h4>
+    <%= p.user.username %>
+  </h4>
+
+    <%= p.textarea %>
+  </p>
+
+  <% end %>
