@@ -1,4 +1,6 @@
-  
+  <!-- REMEMBER TO MAKE THIS SHOW ALL USER'S COMMENTS, -->
+  <!-- not just current_user's posts -->
+
   <% current_user.posts.each do |p| %>
   <h3>
     <%= p.title %>
@@ -10,4 +12,24 @@
     <%= p.textarea %>
   </p>
 
+     <%= form_for Comment.new do |c| %>
+        <%=c.label "Make a Comment" %>
+        <br>
+        <%=c.label "Text:" %>
+        <%=c.text_field :textarea %>
+        <br>
+        <%=c.submit :submit %>
+      <% end %>
+
   <% end %>
+
+  <% current_user.posts.each do |c| %>
+  <h5>
+    <%= c.user.username %>
+  </h5>
+
+    <%= c.textarea %>
+  </p>
+  <% end %>
+
+ 
