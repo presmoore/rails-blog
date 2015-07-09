@@ -12,18 +12,21 @@
 <nav>
   <div id="unordered_list_wrapper">
     <ul class="navigation">
-      <li><a href="http://localhost:3000/profile">Profile</a></li>
-      <li><a href="http://localhost:3000/posts">Feed</a></li>
       <% if current_user %>
-       <%= link_to "Sign Out", '/logout', method: :delete %>
+      <li><a href="http://localhost:3000/profile">Profile</a></li>
       <% end %>
-      <div id="sign-in-link">
-      <li><a href="http://localhost:3000/login_signup">Login/SignUp</a></li>
-      </div>
+      <% if current_user %>
+      <li><a href="http://localhost:3000/posts">Feed</a></li>
+      <% end %>
+      <% if current_user %>
+      <li><a href="http://localhost:3000/logout">Sign Out</a></li>
+      <% end %>
+      <li></li>
     </ul>
   </div>
 </nav>
 
+<% if current_user %>
 <header>
   <%= form_for Post.new do |p| %>
     <%=p.label "Make a Post" %>
@@ -35,6 +38,7 @@
     <%=p.submit :Post %>
   <% end %>
 </header>
+<% end %>
 
 <div id="yielded">
 
@@ -42,13 +46,6 @@
 
 </div>
 
-<style type="text/css">
-  
-#sign-in-link {
-  visibility: hidden;
-}
-
-</style>
 
 </body>
 </html>

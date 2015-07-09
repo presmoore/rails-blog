@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    # session[:user_id] = nil
+    redirect_to '/login_signup'
 
   end
   

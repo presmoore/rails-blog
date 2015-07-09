@@ -18,11 +18,21 @@ header {
     background-color: #3399FF ;
     border-radius: 5px;
     padding: 5px;
+    width: 135px;
+    position: fixed;
+    left: 80%;
 }
 
 nav {
     background-color: #CCFFFF ;
     border-radius: 5px;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 50px 30px 50px;
 }
 
 a {
@@ -47,4 +57,27 @@ a {
     background-color: #B8DBFF;
     width: 25%;
 }
+
+#my_posts {
+    background-color: #CCFFFF;
+    width: 300px;
+}
+
+input {
+    height: 20px;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 2px;
+}
+
+#delete_button {
+    background-color: rgb(250, 100, 100);
+    width: 115px;
+}
+
+
+
+
+
+
 
