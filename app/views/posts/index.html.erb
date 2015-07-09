@@ -1,35 +1,37 @@
   <!-- REMEMBER TO MAKE THIS SHOW ALL USER'S COMMENTS, -->
   <!-- not just current_user's posts -->
 
-  <% current_user.posts.each do |p| %>
-  <h3>
-    <%= p.title %>
-  </h3>
-  <h4>
-    <%= p.user.username %>
-  </h4>
+  <% Post.all.reverse.each do |p| %>
+<div id="posts_wrapper">
+  <!-- POST -->
+    <h3><%= p.title %></h3>
+    <h4><%= p.user.username %></h4>
+    <p><%= p.textarea %></p>
+</div>
 
-    <%= p.textarea %>
-  </p>
 
-     <%= form_for Comment.new do |c| %>
-        <%=c.label "Make a Comment" %>
-        <br>
-        <%=c.label "Text:" %>
-        <%=c.text_field :textarea %>
-        <br>
-        <%=c.submit :submit %>
-      <% end %>
+    <div id="comments_form_wrapper">
+      <!-- COMMENT FORM -->
+        <%= form_for Comment.new do |c| %>
+          <%=c.label "Make a Comment" %>
+          <br>
+          <%=c.text_field :textarea %>
+          <%=c.hidden_field :post_id, value: p.id %>
+          <br>
+          <%=c.submit :submit %>
+        <% end %>
+    </div>
+
+            <div id="comments_wrapper">
+              <!-- COMMENT -->
+                <% p.comments.each do |c| %>
+                  <h5><%= c.user.fname %> <%= c.user.lname %>:</h5>
+                  <p id="comment_text"><%= c.textarea %></p>
+                <% end %>
+            </div>
 
   <% end %>
 
-  <% current_user.posts.each do |c| %>
-  <h5>
-    <%= c.user.username %>
-  </h5>
-
-    <%= c.textarea %>
-  </p>
-  <% end %>
+ 
 
  
