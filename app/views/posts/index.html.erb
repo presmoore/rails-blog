@@ -8,7 +8,9 @@
     <h3><%= p.title %></h3>
     <h4><%= p.user.username %></h4>
     <p><%= p.textarea %></p>
-    <p><%= link_to("Delete Post", p, method: :delete) %></p>
+    <p><%= link_to("Delete Post", p, method: :delete) %>
+    </p>
+    <p><%= link_to("Edit Post", edit_post_path(p)) %></p>
 </div>
 
 

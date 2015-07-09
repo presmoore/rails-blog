@@ -1,0 +1,9 @@
+<%= form_for @post do |p| %>
+    <%=p.label "Edit Post" %>
+    <br>
+    <%=p.text_field :title, placeholder: "Title"  %>
+    <br>
+    <%=p.text_field :textarea, placeholder: "Body"  %>
+    <br>
+    <%=p.submit :Post %>
+  <% end %>
