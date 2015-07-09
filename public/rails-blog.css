@@ -1,6 +1,6 @@
 body {
     background-color: #99CCFF ;
-    font-family: Arial;
+    font-family: 'Poiret One';
     text-decoration: none;
 }
 
@@ -36,12 +36,29 @@ li {
 }
 
 a {
+    color: gray;
+    text-decoration: none;
+}
+
+li a {
     color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li a:hover {
+    text-decoration: underline;
 }
 
 #posts_wrapper {
     background-color: #CCFFFF;
-    width: 45%;
+    width: 75%%;
+    padding: 5px  0px 5px 20px;
+    border-radius: 5px;
+    margin: 5px;
 
 }
 
@@ -56,11 +73,14 @@ a {
 #comment_text {
     background-color: #B8DBFF;
     width: 25%;
+
 }
 
 #my_posts {
     background-color: #CCFFFF;
     width: 300px;
+    padding: 2px;
+    margin: 5px;
 }
 
 input {
@@ -73,6 +93,12 @@ input {
 #delete_button {
     background-color: rgb(250, 100, 100);
     width: 115px;
+}
+#post_and_comments {
+    background-color: #52CCCC;
+    width: 400px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 

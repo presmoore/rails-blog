@@ -9,4 +9,9 @@ class PostsController < ApplicationController
     redirect_to "/posts"
   end
 
+  def destroy
+    @this_post 
+    redirect_to(:back)
+  end
+
 end

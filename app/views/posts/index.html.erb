@@ -2,11 +2,13 @@
   <!-- not just current_user's posts -->
 
   <% Post.all.reverse.each do |p| %>
+  <div id="post_and_comments">
 <div id="posts_wrapper">
   <!-- POST -->
     <h3><%= p.title %></h3>
     <h4><%= p.user.username %></h4>
     <p><%= p.textarea %></p>
+    <p><%= link_to("Delete Post", p, method: :delete) %></p>
 </div>
 
 
@@ -25,10 +27,11 @@
             <div id="comments_wrapper">
               <!-- COMMENT -->
                 <% p.comments.each do |c| %>
-                  <h5><%= c.user.fname %> <%= c.user.lname %>:</h5>
+                  <p><%= c.user.fname %> <%= c.user.lname %>:</p>
                   <p id="comment_text"><%= c.textarea %></p>
                 <% end %>
             </div>
+  </div>
 
   <% end %>
 
