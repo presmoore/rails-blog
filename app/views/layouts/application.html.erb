@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="rails-blog.css">
   <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -14,20 +15,6 @@
 <nav>
 
   <div id="unordered_list_wrapper">
-    
-          <% if current_user %>
-      <header>
-        <%= form_for Post.new do |p| %>
-          <%=p.label "Make a Post" %>
-          <br>
-          <%=p.text_field :title, placeholder: "Title"  %>
-          <br>
-          <%=p.text_field :textarea, placeholder: "Body"  %>
-          <br>
-          <%=p.submit :Post %>
-        <% end %>
-      </header>
-      <% end %>
 
     <ul class="navigation"><h1>Ribbit</h1>
       <% if current_user %>
@@ -43,9 +30,20 @@
 
   </div>
 
+<% if current_user %>
+      <header>
+        <%= form_for Post.new do |p| %>
+          <%=p.label "Make a Post" %>
+          <br>
+          <%=p.text_field :title, placeholder: "Title"  %>
+          <br>
+          <%=p.text_field :textarea, placeholder: "Body"  %>
+          <br>
+          <%=p.submit :Post %>
+        <% end %>
+      </header>
+      <% end %>
 </nav>
-
-
 
 <div id="yielded">
 
