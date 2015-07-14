@@ -1,83 +1,86 @@
+
 body {
-    background-color: #99CCFF ;
-    font-family: 'Poiret One';
+    background-color: #B2E0C2 ;
+    font-family: 'Quicksand', sans-serif;
     text-decoration: none;
+    margin: 0px;
 }
-
-#yielded {
-    margin-left: 200px;
-}
-
 .navigation {
-
-    background-color: #0000FF ;
-    border-radius: 5px;
+    margin: 0px;
+    padding-left: 25px;
 }
-
+.navigation li {
+    margin-top: 49px;
+    margin-bottom: 49px;
+}
+.navigation ul {
+    padding-left: 100px;
+}
+a:hover {
+    border: solid 1px;
+    margin: -1px;
+}
+#unordered_list_wrapper { 
+    height: 117px;
+    background-color: #33AD5C;
+    color: #CCFFCC;
+}
 header {
-    background-color: #3399FF ;
-    border-radius: 5px;
+    background-color: #006600 ;
     padding: 5px;
     width: 135px;
     position: fixed;
-    left: 80%;
-}
-
-nav {
-    background-color: #CCFFFF ;
+    top: 0px;
+    right: 0px;
     border-radius: 5px;
-    text-align: center;
+    color: #CCFFCC;
+}
+h1 {
+    float: left;    
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 40px;
+    padding-right: 50px;
 }
 
 li {
     display: inline-block;
-    text-align: center;
-    margin: 10px 50px 30px 50px;
+}
+.navigation a {
+    color: #CCFFCC;
 }
 
 a {
     color: gray;
     text-decoration: none;
-}
-
-li a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-li a:hover {
-    text-decoration: underline;
+    border: 10px;
+    padding: 25px
 }
 
 #posts_wrapper {
-    background-color: #CCFFFF;
+    background-color: #D6EEDE;
     width: 75%%;
     padding: 5px  0px 5px 20px;
     border-radius: 5px;
-    margin: 5px;
-
+    margin: 0px auto;
 }
 
 #comments_form_wrapper {
-    margin-left: 100px;
+    margin: 10px;
+    width: 400px;
 }
 
 #comments_wrapper {
-    margin-left: 100px;
+    margin: 10px;
+    padding: 5px;
 }
 
 #comment_text {
-    background-color: #B8DBFF;
+    background-color: #D6EEDE;
     width: 25%;
-
 }
 
 #my_posts {
-    background-color: #CCFFFF;
+    background-color: #D6EEDE;
     width: 300px;
     padding: 2px;
     margin: 5px;
@@ -88,22 +91,28 @@ input {
     border-radius: 5px;
     padding: 2px;
     margin: 2px;
+    color: #ffffff;
 }
 
-#delete_button {
-    background-color: rgb(250, 100, 100);
-    width: 115px;
-}
 #post_and_comments {
-    background-color: #52CCCC;
+    background-color: #29A629;
     width: 400px;
     margin: 10px;
     border-radius: 5px;
+    padding: 5px;
+}
+
+#yielded {
+    margin-left: 200px;
 }
 
 
 
-
-
-
-
+div#posts_wrapper {
+    margin: 5px;
+    padding: 5px;
+}
+#delete_button {
+    background-color: rgb(250, 100, 100);
+    width: 110px;
+}
